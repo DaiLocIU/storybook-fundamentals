@@ -1,8 +1,9 @@
 <template>
   <div class="p-3 rounded-md bg-gray-200 inline-block">
     <input
+      :disabled="disabled"
       class="border px-2"
-      :class="isTextTooLong ? 'border-red-500 bg-red-200' : undefined"
+      :class="isTextTooLong && 'border-red-500 bg-red-200'"
       v-model="val"
       @input="$emit('input', val)"
     />
